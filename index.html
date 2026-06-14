@@ -1105,6 +1105,7 @@ makeDragScroll(document.querySelector('.svc-track'));
   var prefersReduced = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
   if(prefersReduced){ vid.pause(); vid.removeAttribute('autoplay'); return; }
   if(isMobile){ src.src = 'hero-mobile.mp4'; vid.load(); }
+  vid.playbackRate = 0.65;
   vid.play().catch(function(){});
 })();
 
