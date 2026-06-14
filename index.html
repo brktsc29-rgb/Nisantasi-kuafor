@@ -408,6 +408,7 @@ footer{background:#1c1408;border-top:1px solid rgba(200,155,74,.2);padding:80px 
 @media(max-width:900px){
   .topbar{padding:8px 16px}
   .topbar-info{gap:12px}
+  .btn-tel,.btn-wa{display:none}
   .site-header{padding:0 16px}
   .main-nav{display:none}
   .hamburger{display:flex}
@@ -444,6 +445,10 @@ footer{background:#1c1408;border-top:1px solid rgba(200,155,74,.2);padding:80px 
   .process-steps{grid-template-columns:1fr}
   .before-after-grid{grid-template-columns:1fr 1fr}
   .hero-trust{flex-direction:column;gap:12px}
+  /* Topbar: sadece saat göster, adres ve sosyal gizle */
+  .topbar-item:first-child{display:none}
+  .topbar-social{display:none}
+  .topbar-info{justify-content:center}
 }
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
