@@ -43,6 +43,10 @@
   --muted:rgba(244,239,230,.32);
   --border:rgba(200,155,74,.13);
   --border-h:rgba(200,155,74,.38);
+  --hero-bg:#f5f0ea;
+  --hero-text:#1a1208;
+  --hero-dim:rgba(26,18,8,.52);
+  --hero-gold:#C89B4A;
 }
 html{scroll-behavior:smooth;-webkit-tap-highlight-color:transparent;overflow-x:hidden;max-width:100%}
 body{background:var(--bg);color:var(--cream);font-family:'Inter',sans-serif;font-weight:300;overflow-x:hidden;line-height:1.6;max-width:100%;width:100%}
@@ -113,12 +117,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .mobile-nav-close:hover{color:var(--cream)}
 
 /* ══ HERO — LIGHT IVORY THEME ═══════════════════════ */
-/* Ivory vars */
---hero-bg:#f5f0ea;
---hero-text:#1a1208;
---hero-dim:rgba(26,18,8,.52);
---hero-gold:#C89B4A;
-
 /* DESKTOP: flex row, video absolute right */
 .hero{position:relative;min-height:90vh;background:var(--hero-bg);display:flex;align-items:center;overflow:hidden}
 
@@ -485,7 +483,7 @@ footer{background:#030303;border-top:1px solid var(--border);padding:80px 48px 4
 </div>
 
 <!-- ══ HEADER ══════════════════════════════════════ -->
-<header class="site-header">
+<header class="site-header" id="site-header">
   <div class="header-inner">
     <a href="/" class="logo" aria-label="Prime Hair Nişantaşı Ana Sayfa">Prime Hair<span> Nişantaşı</span></a>
     <nav class="main-nav" aria-label="Ana navigasyon">
