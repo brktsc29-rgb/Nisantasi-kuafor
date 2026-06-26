@@ -109,8 +109,8 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .btn-wa::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at center,rgba(255,255,255,.2),transparent 70%);opacity:0;transition:opacity .3s}
 .btn-wa:hover{background:var(--gold-l);box-shadow:0 0 30px var(--gold-glow)}
 .btn-wa:hover::before{opacity:1}
-.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer}
-.hamburger span{display:block;width:22px;height:1px;background:#2a1a08;transition:all .3s,.background .4s}
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;cursor:pointer;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:#2a1a08;border-radius:1px;transition:all .3s}
 /* Scrolled state */
 .site-header.scrolled{background:rgba(5,5,5,.92);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom-color:var(--border)}
 .site-header.scrolled .logo{color:var(--gold)}
@@ -120,12 +120,11 @@ button{font-family:inherit;cursor:pointer;border:none;background:none}
 .site-header.scrolled .btn-tel{color:var(--dim);border-color:var(--border)}
 .site-header.scrolled .btn-tel:hover{border-color:var(--border-h);color:var(--cream)}
 .site-header.scrolled .hamburger span{background:var(--cream)}
-.mobile-nav{display:none;position:fixed;inset:0;z-index:400;background:rgba(26,18,8,.97);flex-direction:column;align-items:center;justify-content:center;gap:32px;padding:80px 32px 40px}
+.mobile-nav{display:none;position:fixed;top:72px;left:0;right:0;z-index:400;background:rgba(20,14,6,.96);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);flex-direction:column;padding:4px 0 20px;border-top:1px solid rgba(200,155,74,.2)}
 .mobile-nav.open{display:flex}
-.mobile-nav a{font-family:'Cormorant Garamond',serif;font-size:2rem;font-weight:300;color:#F4EFE6;letter-spacing:.06em;transition:color .3s}
-.mobile-nav a:hover{color:var(--gold)}
-.mobile-nav-close{position:absolute;top:28px;right:28px;font-size:1.5rem;color:rgba(244,239,230,.5);cursor:pointer;transition:color .3s}
-.mobile-nav-close:hover{color:#F4EFE6}
+.mobile-nav a{font-family:'Inter',sans-serif;font-size:.76rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:rgba(244,239,230,.6);padding:15px 28px;border-bottom:1px solid rgba(255,255,255,.05);transition:color .2s;text-decoration:none}
+.mobile-nav a:hover,.mobile-nav a:active{color:var(--gold)}
+.mobile-nav .btn-wa{margin:12px 24px 4px;padding:13px 24px;display:block;text-align:center;border-bottom:none;letter-spacing:.15em}
 
 /* ══ HERO — LIGHT IVORY THEME ═══════════════════════ */
 /* DESKTOP: flex row, video absolute right */
@@ -524,7 +523,6 @@ footer{background:#1c1408;border-top:1px solid rgba(200,155,74,.2);padding:80px 
 
 <!-- Mobile nav -->
 <nav class="mobile-nav" id="mobile-nav" aria-label="Mobil navigasyon">
-  <button class="mobile-nav-close" id="mobile-nav-close" aria-label="Menüyü kapat">&times;</button>
   <a href="/" onclick="closeMobileNav()">Ana Sayfa</a>
   <a href="#hizmetler" onclick="closeMobileNav()">Hizmetlerimiz</a>
   <a href="#hakkimizda" onclick="closeMobileNav()">Hakkımızda</a>
